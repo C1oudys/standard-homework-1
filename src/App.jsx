@@ -41,7 +41,9 @@ function App() {
       <input 
       type="number" 
       value={minAge}
-      onChange={handleAgeChange}
+      onChange={(event) => {
+        setMinAge(event.target.value);
+      }}
       /> 살 이상
       <ul>{studentList}</ul>
     </div>
